@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mann-Hummel</title>
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="titulo">
+  <h1>Mann-Hummel VideoCall</h1>
+  <img src="Icons/MANNHUMMEL_Logo.svg" width="140" height="60" class="logo">
+  <script src="/socket.io/socket.io.js"></script>
+</header>
+
+
+
+  <section class="Pantalla"> 
+    <div id="list" style="width: 0px;">
+      <script src="members.js"></script>
+    </div>
+
+
+      <video id="screenDisplay" autoplay muted></video>
+      <canvas id="canvas"></canvas>
+      <div class="colors" style="display: block;">
+        <button id="greenButton" value="green">green</button>
+        <button id="redButton" value="red">red</button>
+        <button id="blackButton" value="black">black</button>
+        <button id="whiteButton" value="white">white</button>
+      </div>
+      <br>
+    </section>
+    
+    
+    
+    
+
+
+    <footer class="foot">
+<button id="camaraON" onclick="startCam()"><img id="camaraImg" src="Icons/camara.png"></button> <!---  Iniciar camara -->
+
+<button id="snapshotButton"><img id="displayImg" src="Icons/DrawOn.png"></button> <!---  Sacar fotograma actual y dibujarlo -->
+<button id="eraseButton"><img src="Icons/eraser icon.png" alt=""></button> <!--- Borrar dibujo del canvas -->
+
+<button id="micMute" onclick="micMute()"><img id="micImg" src="Icons/Micro.png"></button>  <!---  Iniciar microfono -->
+<button id="memberList">Miembros</button>
+<button id="leaveCall" onclick="endCall()"><img id="discImg" src="Icons/discImg.png"></button>
+  
+
+
+</footer>
+
+
+<audio autoplay controls></audio>
+<script src="./app.js"></script>
+<script src="./signaling.js"></script>
+<script src="canvas/canvas.js" async></script>
+<script src="canvas/canvasDraw.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {font-family: "Poppins";}
+
+
+h1 {color: #0b8355 ;
+display: inline-block;}
+
+.titulo {
+    display: inline;
+}
+
+.logo {padding-left: 57%;
+justify-content: space-between;
+align-content: center;}
+
+div {display: inline-block;}
+
+.chat {margin-left: 35%;
+    margin-top: 20%;
+display: block;}
+
+.Pantalla {
+    width: 1500px;
+}
+
+.Camaras {
+    display: inline-block;
+    height: 450px;
+    width: 250px;
+    padding: 3% 0% 0% 3%;
+    }
+
+#screenDisplay {
+    width: 810px;
+    height: 480px;
+    border-radius: 17.5px;
+    box-shadow: 0px 5px 15px 0px black;
+    border: 1px solid black;
+}
+
+#localVideo, #remoteVideo {
+    width: 200px;
+    height: 200px ;
+    border-radius: 17.5px;
+    margin: 0% 0% 15% 0%;
+    box-shadow: 0px 5px 15px 0px black;
+    border: 1px solid black;
+  }
+
+.Video1{
+    display: block;
+    margin-bottom: 2.5%; 
+    box-shadow: 0px 0px 15px 0px #0000;
+}
+
+.Video2 {
+    display: block;
+    margin-bottom: 2.5%;
+
+}
+button {
+    height:70px; 
+    width:70px;
+    border-radius:60px;
+    margin:0px; 
+    background-color: white;
+    transition: 500ms;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 15px 0px black;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.foot {
+display: inline-flex;   
+margin-left: 100px;
+}
+
+#discImg{
+    max-width: 55px;
+}
+img {
+position: center;
+}
+
+#micros, #camaras {margin-right: 10px;
+    border-radius:40px;
+    box-shadow: 0px 4px 15px 0px black;}
+
+#vLlamada {width: 100px;
+    box-shadow: 0px 4px 15px 0px black;}
+.chat{
+background-color: blue;
+height: 100px;
+width: 100px;
+
+}    
+
+#list {
+    height: 480px;
+    background-color: rgb(117, 111, 122);
+    transition: 500ms;
+}
