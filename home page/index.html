@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -12,16 +13,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <a href="https://www.mann-hummel.com/en.html"> <img width="138.71px"; height="50px" src="Img/MANN+HUMMEL_Logo.svg"></a>
-        
+        <a href="https://www.mann-hummel.com/en.html"> <img width="138.71px" ; height="50px"
+                src="Img/MANN+HUMMEL_Logo.svg"></a>
         <a id="memberList" onclick="toggleList()"> <img src="menuP.png" width="50px"></a>
-        
+        <div id="loginData"></div>
     </header>
     <div class="bodynashe">
         <div class="info">
-            MANN+HUMMEL es una empresa global de capital privado especializada en filtros que ofrece soluciones de filtrado a clientes de equipos originales y del mercado de recambios tanto del sector industrial como de la automoción.
+            MANN+HUMMEL es una empresa global de capital privado especializada en filtros que ofrece soluciones de
+            filtrado a clientes de equipos originales y del mercado de recambios tanto del sector industrial como de la
+            automoción.
             <div class="horizontal-line-3"></div><button class="boton-reun"> Reuniones programadas
             </button>
         </div>
@@ -30,30 +34,51 @@
             <div class="horizontal-line-4"></div>
             <textarea class="text-area" placeholder="Código"></textarea>
             <div><select class="combo-box"></div>
-                <option value="opcion1">Microfono</option>
-                <option value="opcion2">Microfono1</option>
-                <option value="opcion3">Microfono2</option>
+            <option value="opcion1">Microfono</option>
+            <option value="opcion2">Microfono 1</option>
+            <option value="opcion3">Microfono 2</option>
             </select>
             <div><select class="combo-box"></div>
-                <option value="opcion1">Camara</option>
-                <option value="opcion2">Camara1</option>
-                <option value="opcion3">Camara2</option>
+            <option value="opcion1">Camara</option>
+            <option value="opcion2">Camara 1</option>
+            <option value="opcion3">Camara 2</option>
             </select>
         </div>
+
     </div>
     <div id="list" style="width: 0px; display: none;">
-        <a class="leMenu"  href="#" onclick="toggleList()"><img src="menuC.png" width="50px"></a>
-    <ul class="navigation">
+        <a class="leMenu" href="#" onclick="toggleList()"><img src="menuC.png" width="50px"></a>
+        <ul class="navigation">
 
-        <li> <a class="aDise" href=""> opcion 1 </a></li>
-        <li> <a class="aDise" href=""> opcion 2 </a></li>
-        <li> <a class="aDise" href=""> opcion 3 </a></li>
-        <li> <a class="aDise" href=""> opcion 4 </a></li>
-        <li> <a class="aDise" href=""> opcion 5  </a></li>
-        <li> <a class="aDise" href=""> opcion 6 </a></li>
-        <li> <a class="aDise" href=""> opcion 7 </a></li>
-        <li> <a class="aDise" href=""> opcion 8 </a></li>
-    </ul>   
- </div> 
+            <li> <a class="aDise" href=""> opcion 1 </a></li>
+            <li> <a class="aDise" href=""> opcion 2 </a></li>
+            <li> <a class="aDise" href=""> opcion 3 </a></li>
+            <li> <a class="aDise" href=""> opcion 4 </a></li>
+            <li> <a class="aDise" href=""> opcion 5 </a></li>
+            <li> <a class="aDise" href=""> opcion 6 </a></li>
+            <li> <a class="aDise" href=""> opcion 7 </a></li>
+            <li> <a class="aDise" href=""> opcion 8 </a></li>
+        </ul>
+    </div>
+    <br>
+    <button id="openPopUp">Ingresar como...</button>
+    <div id="myModal" class="modal">
+        <div>
+            <span class="close" id="closePopUp">&times;</span>
+            <form id="login-form">
+                <input type="text" placeholder="Introduzca su nombre y apellido" id="username" autocomplete="off" />
+                <br>
+                <select id="rol">
+                    <option value="Operario">Operario</option>
+                    <option value="Supervisor">Supervisor</option>
+                </select>
+                <br>
+                <input type="submit" value="Iniciar sesión" />
+            </form>
+        </div>
+    </div>
+    <br>
+    <button id="logOut" onclick="logOut()">Cerrar sesión</button>
 </body>
+
 </html>

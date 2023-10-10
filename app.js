@@ -1,30 +1,13 @@
-const mediaRecorder = new MediaRecorder(stream);
+const mediaRecorder = new MediaRecorder();
 
-const configuration = {
-  iceServers:[
-    {
-    urls: 'turn:openrelay.metered.ca:80',
-    username: 'openrelayproject',
-    credential: 'openrelayproject'
-    }
-  ]
-};
-
-const peerConnection = new RTCPeerConnection(configuration);
 const localVideo = document.getElementById('screenDisplay');
 const mic = document.getElementById("micImg");
 
 let camStat = null;
-let camButton= null;
-let micStream= null;
-let muteToggle= null;
+let camButton = null;
+let micStream = null;
+let muteToggle = null;
 let streamStatus = null;
-
-mediaRecorder.ondataavailable = function(event){
-  if(event.data.size > 0){
-    websocket.send(event.data);
-  }
-};
 
 function getUserMedia() {
   navigator.mediaDevices.getUserMedia({video:true, audio:true}).then(stream => {
@@ -90,13 +73,6 @@ function micMute() {
   }
 }
 
-function endCall(){
-  mediaRecorder.stop();
-  mediaRecorder.onstop = function () {
-    window.location.href = 'home page/index.html';
-  };
-}
-
 const memberButton = document.getElementById('memberList');
 let isShown = false;
 function toggleList (){
@@ -109,6 +85,19 @@ function toggleList (){
         isShown = true;
     }
 }
+
+function endCall(){
+  mediaRecorder.stop();
+  mediaRecorder.onstop = function () {
+    window.location.href = 'home page/index.html';
+  };
+}
+
+mediaRecorder.ondataavailable = function(event){
+  if(event.data.size > 0){
+    websocket.send(event.data);
+  }
+};
 
 memberButton.addEventListener('click', toggleList)
 
